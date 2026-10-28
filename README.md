@@ -10,7 +10,7 @@ The skills hold no project names, languages or commands. They read the rules of 
 | --- | --- | --- |
 | [`task-flow`](skills/task-flow/SKILL.md) | Branch, commits, checks, changelog and pull request, following the repository's own rules | Available |
 | [`fix-with-test`](skills/fix-with-test/SKILL.md) | Reproduces a bug with a failing test before fixing it | Available |
-| `docs-sync` | Finds the docs a change left out of date and updates them | Planned |
+| [`docs-sync`](skills/docs-sync/SKILL.md) | Finds the docs a change left out of date and updates them | Available |
 | `new-adr` | Records a technical decision as a numbered ADR | Planned |
 | `security-pass` | Reviews the diff for security issues before asking for review | Planned |
 | `release` | Prepares a release: changelog, release branch and pull request | Planned |
