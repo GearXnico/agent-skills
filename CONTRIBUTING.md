@@ -10,6 +10,26 @@ Ideas for new skills and improvements to existing ones are welcome. Open an issu
 4. It ships with evals that pass in at least two different agents.
 5. It never merges, approves, tags or pushes to a protected branch.
 
+## Design principles
+
+**Spend few tokens.**
+
+- Keep `SKILL.md` short (aim for under 150 lines); move detail to `references/`, which the agent reads only when needed.
+- Write a `description` that says exactly when to use the skill, so agents do not load it when it does not apply.
+- Put repeatable, deterministic steps in `scripts/`: running a script costs less than reasoning through it every time.
+- Read only what the task needs (the rules, the diff, the files it changes), and do not reread files.
+- Keep replies to the user short: the result, the link and what is needed from them.
+
+**Leave good code behind.** When the repository defines its own practices, those win. Otherwise a skill steers the agent to:
+
+- Make the smallest change that solves the task, with no layers or configuration "just in case".
+- Pick the simpler of two secure options; never trade security away.
+- Write code that reads without comments; comment only a non-obvious why.
+- Ship each change with its test, and start each fix with a test that reproduces the bug.
+- Never skip, disable or delete a test to get green.
+- Validate external input, and never log secrets or personal data.
+- Make small commits, one change each, that keep the tests green.
+
 ## Layout of a skill
 
 ```

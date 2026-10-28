@@ -38,6 +38,8 @@ Install from `main`, which only holds released versions.
 
 ## How the skills are built
 
+- Short and cheap to run: brief instructions, detail loaded only when needed, scripts for repeatable steps.
+- They steer the agent to good practices (small changes, tests with every change, no skipped tests, simple and secure code) unless the repository sets its own.
 - Only fields from the standard: `name`, `description`, `license` and `metadata`. No agent-specific fields, so every agent reads the same file.
 - Every skill ships with `evals/`: the request, the repository state and the expected behaviour. They are run by hand in two different agents before a release.
 - CI validates every skill with the reference validator on each pull request.
