@@ -11,6 +11,7 @@ This repository publishes portable skills for coding agents, following the [Agen
 - `SKILL.md` stays under 500 lines; detail goes in `references/`.
 - Every skill has `evals/` with 3 to 5 cases.
 - A skill never merges, approves, tags or pushes to a protected branch.
+- Follow the design principles in `CONTRIBUTING.md`: spend few tokens and leave good code behind.
 
 ## Commands
 
