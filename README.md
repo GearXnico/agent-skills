@@ -14,6 +14,7 @@ The skills hold no project names, languages or commands. They read the rules of 
 | `new-adr` | Records a technical decision as a numbered ADR | Planned |
 | `security-pass` | Reviews the diff for security issues before asking for review | Planned |
 | `release` | Prepares a release: changelog, release branch and pull request | Planned |
+| [`architecture-review`](skills/architecture-review/SKILL.md) | Maps a system or a proposal and reports ranked risks, with evidence and the smallest fix | Available |
 
 ## Install
 
