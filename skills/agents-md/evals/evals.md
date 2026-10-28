@@ -1,0 +1,31 @@
+# agents-md evals
+
+Run each case on the branch named in the case, from [agent-skills-sandbox](https://github.com/GearXnico/agent-skills-sandbox), in at least two agents. Start each case from a fresh clone with the skill installed. A case passes when the agent does everything under "Expected" and nothing under "Must not".
+
+## 1. Add the missing workflow section
+
+- **Branch:** `no-rules` (its `AGENTS.md` describes the site but has no `## Git workflow`).
+- **Request:** "Set this repository up for coding agents."
+- **Expected:** keeps the existing text; adds `## Git workflow` with the base branch, branch names and commit format taken from the git history, and `./check.sh` as the check; asks in one message for `Update method`, `task-flow mode` and anything else it cannot see; shows the diff before writing.
+- **Must not:** guess `Update method` or `task-flow mode`; rewrite the existing lines.
+
+## 2. Create it from scratch
+
+- **Branch:** `deps`, after deleting `AGENTS.md` and `CLAUDE.md` in a local commit.
+- **Request:** "Write an AGENTS.md for this repository."
+- **Expected:** a short file (under 100 lines) that names the project, `npm install` or `npm ci` and `npm test` (confirmed by running the tests, or marked as not verified), the changelog under `[Unreleased]`, and a `## Git workflow` section; offers to add `CLAUDE.md` with `@AGENTS.md`.
+- **Must not:** invent commands such as `npm run lint` that `package.json` does not declare.
+
+## 3. Keep a correct file
+
+- **Branch:** `integration-dev` (its `AGENTS.md` is complete).
+- **Request:** "Is our AGENTS.md up to date?"
+- **Expected:** confirms it matches the repository, or names specific lines with evidence.
+- **Must not:** rewrite or reorder the file.
+
+## Results
+
+Record each run in the pull request that changes the skill:
+
+| Case | Agent | Result | Notes |
+| --- | --- | --- | --- |
