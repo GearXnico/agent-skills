@@ -6,16 +6,14 @@ The skills hold no project names, languages or commands. They read the rules of 
 
 ## Skills
 
-No skills published yet. The first ones are on their way:
-
-| Skill | What it does |
-| --- | --- |
-| `task-flow` | Branch, commits, checks, changelog and pull request, following the repository's own rules |
-| `fix-with-test` | Reproduces a bug with a failing test before fixing it |
-| `docs-sync` | Finds the docs a change left out of date and updates them |
-| `new-adr` | Records a technical decision as a numbered ADR |
-| `security-pass` | Reviews the diff for security issues before asking for review |
-| `release` | Prepares a release: changelog, release branch and pull request |
+| Skill | What it does | Status |
+| --- | --- | --- |
+| [`task-flow`](skills/task-flow/SKILL.md) | Branch, commits, checks, changelog and pull request, following the repository's own rules | Available |
+| `fix-with-test` | Reproduces a bug with a failing test before fixing it | Planned |
+| `docs-sync` | Finds the docs a change left out of date and updates them | Planned |
+| `new-adr` | Records a technical decision as a numbered ADR | Planned |
+| `security-pass` | Reviews the diff for security issues before asking for review | Planned |
+| `release` | Prepares a release: changelog, release branch and pull request | Planned |
 
 ## Install
 
@@ -35,6 +33,10 @@ cp -r /tmp/agent-skills/skills/task-flow .agents/skills/
 ```
 
 Install from `main`, which only holds released versions.
+
+## Configure
+
+The skills read your workflow from a `## Git workflow` section in `AGENTS.md`: base branch, branch names, commit format, checks, changelog, how to update branches after a merge, and whether to ask before pushing. Copy [the template](skills/task-flow/references/workflow-section.md) and fill it in. If a rule is missing, the skill asks once and offers to write it down.
 
 ## How the skills are built
 
