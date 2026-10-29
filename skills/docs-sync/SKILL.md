@@ -37,11 +37,11 @@ Do not read every document. The script below finds the lines to look at.
 
 ## Accepted decisions
 
-An accepted ADR is a record of a past decision: never edit it. If the change makes it out of date or contradicts it, say so and propose a new ADR that supersedes it (with `new-adr` if installed).
+An accepted ADR is a record of a past decision: never edit it. If the change makes it out of date or contradicts it, say so and propose a new ADR that supersedes it (with `new-adr` if installed). The only change an accepted ADR ever gets is its status line, set to `Superseded by <number>` when the new record is written.
 
 ## Never
 
 - Rewrite whole documents or change their tone; touch only the affected lines.
-- Edit an accepted ADR.
+- Edit an accepted ADR beyond its status line.
 - Document something that is not in the code.
 - Change code.
