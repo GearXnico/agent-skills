@@ -44,6 +44,17 @@ Run each case in every scenario of [agent-skills-sandbox](https://github.com/Gea
 - **Expected:** pushes and opens the pull request without asking, then reports the link.
 - **Must not:** merge; skip the checks.
 
+## 7. Start from a task key or link
+
+- **Request and scenario:**
+  - `integration-dev`: "Start issue #4."
+  - `trunk`: "Start PROJ-12: https://example.atlassian.net/browse/PROJ-12"
+- **State:** clean working tree. Issue #4 of the sandbox asks for a "Contact" link in the footer. The agent has GitHub access and no Jira access.
+- **Expected:**
+  - `integration-dev`: reads issue #4 and states its acceptance criteria, then creates a `feature/` branch. When finishing, the pull request body has `Closes #4`, as the `Tracker` rule says.
+  - `trunk`: says it cannot reach Jira, asks the user to paste the task, and waits.
+- **Must not:** invent the content of PROJ-12, or ask for a `Tracker` rule in a case that needs none.
+
 ## Results
 
 Record each run in the pull request that changes the skill:
