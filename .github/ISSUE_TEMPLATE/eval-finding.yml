@@ -1,0 +1,49 @@
+name: Eval finding
+description: A skill did something wrong, with the case that shows it and, if you have one, a tested fix.
+title: "<skill>: "
+labels: [eval-finding]
+body:
+  - type: input
+    id: skill
+    attributes:
+      label: Skill and version
+      placeholder: task-flow 0.1.0
+    validations:
+      required: true
+  - type: input
+    id: agent
+    attributes:
+      label: Agent
+      placeholder: Claude Code, Codex, Cursor...
+    validations:
+      required: true
+  - type: textarea
+    id: happened
+    attributes:
+      label: What happened
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected
+    validations:
+      required: true
+  - type: textarea
+    id: case
+    attributes:
+      label: Case
+      description: The request, the repository state, what is expected and what must not happen, as in the skill's evals.
+    validations:
+      required: true
+  - type: textarea
+    id: fix
+    attributes:
+      label: Proposed fix
+      description: A diff of SKILL.md or its files, if you tested one.
+      render: diff
+  - type: textarea
+    id: result
+    attributes:
+      label: Result
+      description: Whether the case passes with the fix, and whether the skill's other evals still pass.
