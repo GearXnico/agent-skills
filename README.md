@@ -11,7 +11,7 @@ The skills hold no project names, languages or commands. They read the rules of 
 | [`task-flow`](skills/task-flow/SKILL.md) | Branch, commits, checks, changelog and pull request, following the repository's own rules | Available |
 | [`fix-with-test`](skills/fix-with-test/SKILL.md) | Reproduces a bug with a failing test before fixing it | Available |
 | [`docs-sync`](skills/docs-sync/SKILL.md) | Finds the docs a change left out of date and updates them | Available |
-| `new-adr` | Records a technical decision as a numbered ADR | Planned |
+| [`new-adr`](skills/new-adr/SKILL.md) | Records a technical decision as a numbered ADR in the repository's own format, and marks the one it replaces as superseded | Available |
 | `security-pass` | Reviews the diff for security issues before asking for review | Planned |
 | `release` | Prepares a release: changelog, release branch and pull request | Planned |
 | [`architecture-review`](skills/architecture-review/SKILL.md) | Maps a system or a proposal and reports ranked risks, with evidence and the smallest fix | Available |
