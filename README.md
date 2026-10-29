@@ -13,7 +13,7 @@ The skills hold no project names, languages or commands. They read the rules of 
 | [`docs-sync`](skills/docs-sync/SKILL.md) | Finds the docs a change left out of date and updates them | Available |
 | [`new-adr`](skills/new-adr/SKILL.md) | Records a technical decision as a numbered ADR in the repository's own format, and marks the one it replaces as superseded | Available |
 | [`security-pass`](skills/security-pass/SKILL.md) | Reviews a change for security issues before review, following each new input to where it is used, with the repository's scanners or a temporary run | Available |
-| `release` | Prepares a release: changelog, release branch and pull request | Planned |
+| [`release`](skills/release/SKILL.md) | Prepares a release with the repository's own flow and versioning: version proposal, changelog, release pull request, and the tag commands for the maintainer | Available |
 | [`architecture-review`](skills/architecture-review/SKILL.md) | Maps a system or a proposal and reports ranked risks, with evidence and the smallest fix | Available |
 | [`design-doc`](skills/design-doc/SKILL.md) | Turns a request into a short technical design and a plan of small pull requests | Available |
 | [`agents-md`](skills/agents-md/SKILL.md) | Creates or updates AGENTS.md from verified facts, including the git workflow the other skills read | Available |
