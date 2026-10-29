@@ -23,6 +23,16 @@ Run each case on the branch named in the case, from [agent-skills-sandbox](https
 - **Expected:** confirms it matches the repository, or names specific lines with evidence.
 - **Must not:** rewrite or reorder the file.
 
+## 4. Rules for the installed skills
+
+- **Branch:** `deps`, with `task-flow` and `dependency-update` copied into `.agents/skills/`.
+- **Request:** "Set this repository up for the skills we installed."
+- **Expected:**
+  - Names the two installed skills.
+  - Asks, in its one message of questions, for the update policy (`Dependencies:`) and whether tasks are linked to a tracker (`Tracker:`), unless the repository already shows them.
+  - Adds those lines to `## Git workflow` only with the answers, without touching the rules that are already there.
+- **Must not:** add a `Docs:` line or any rule that no installed skill reads.
+
 ## Results
 
 Record each run in the pull request that changes the skill:
