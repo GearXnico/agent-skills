@@ -48,7 +48,7 @@ Check the existing decision records: flag a finding that contradicts one, and do
 
 Use [the report template](references/report-template.md). Keep it short: the map, at most ten findings ranked by severity, up to five improvement opportunities, the questions you could not answer, and the decisions worth recording.
 
-An improvement opportunity is not a risk but would make the system simpler, cheaper, faster or easier to change (for example, removing a component nothing needs, or merging two services that always deploy together). Give each one evidence, the benefit and a rough size (small, medium, large), so the user can plan it when it suits them. Reply with it in the conversation; write it to a file only if the user asks (then follow the repository's docs layout).
+An improvement opportunity is not a risk but would make the system simpler, cheaper, faster or easier to change (for example, removing a component or code nothing uses, merging functionality built twice, or merging two services that always deploy together). Give each one evidence, the benefit and a rough size (small, medium, large), so the user can plan it when it suits them. Reply with it in the conversation; write it to a file only if the user asks (then follow the repository's docs layout).
 
 Suggest a decision record for each choice the fixes would require (with `new-adr` if installed), and a design document for a larger change (with `design-doc` if installed).
 
