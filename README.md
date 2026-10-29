@@ -35,7 +35,7 @@ cd your-project
 ~/agent-skills/install.sh --update task-flow     # replace an installed skill with the new version
 ```
 
-The installer only copies folders: it skips skills that are already installed unless you pass `--update`, and it never runs the skills or edits other files. Then ask your agent to run `agents-md`, which writes the rules the installed skills read into `AGENTS.md`.
+The installer only copies folders, without each skill's `evals/` (they are for testing the skill, not for using it): it skips skills that are already installed unless you pass `--update`, and it never runs the skills or edits other files. Then ask your agent to run `agents-md`, which writes the rules the installed skills read into `AGENTS.md`.
 
 To install by hand, copy a skill folder to where your agent looks for skills:
 

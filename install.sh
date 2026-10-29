@@ -28,6 +28,7 @@ for skill in "$@"; do
   else
     rm -rf "${target:?}/$skill"
     cp -R "$source_dir/$skill" "$target/$skill"
+    rm -rf "$target/$skill/evals"
     echo "installed $skill -> $target/$skill"
   fi
 done
