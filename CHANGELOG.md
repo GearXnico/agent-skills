@@ -6,6 +6,7 @@ New changes go under `[Unreleased]` and get a version number when a release is c
 
 ### Added
 
+- `security-pass` skill: a focused security review of the current change, using the scanners the repository declares (found by a script) or a temporary run the user accepts, a checklist read only for the categories the diff touches, and each new input followed to where it is used; reports verified findings with a masked secret and a concrete fix, and prepares a scanner integration to apply on approval. Five evals on the sandbox `security` scenario.
 - `new-adr` skill: records a decision as a numbered ADR (context, options, decision, consequences) in the repository's own format and folder, found by a script that also gives the next number; writes `Proposed` unless the user says it is decided, updates the index, and marks a replaced record `Superseded by` without touching the rest of it. Four evals on the sandbox `adr` and `trunk` scenarios.
 - `install.sh`: copies all or some skills into a project's `.agents/skills/` or `.claude/skills/`, skips installed ones unless `--update` is given, and points to `agents-md` for the setup. Manual install steps stay in the README.
 - `incident-postmortem` skill: writes a blameless postmortem from the facts in the incident window, with a sourced timeline, the trigger and any latent defect traced back to the commit that introduced it, impact, actions and a recommendation for each finding; declines to blame people and keeps personal data out of the report. Four evals on the sandbox `incident` and `services` scenarios.
