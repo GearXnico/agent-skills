@@ -32,6 +32,8 @@ Read only the code of the bug, its nearest tests and the test command, not the w
 6. **Commit the fix**: for example `fix: <bug>`.
 7. **Report** in three lines: the root cause, the test and the change. If `task-flow` is installed, continue with its finish step.
 
+If the bug shows that a refactor or a larger change is worth doing (for example, the same logic duplicated in several places), add it to the report as a separate recommendation: what would change, why, and its rough size. Do not apply it in this fix, so the user can plan it when it suits them.
+
 If you cannot reproduce the bug with a test, stop and say so, with what you tried. Do not "fix" something you have not proven.
 
 If the fix makes an existing test fail, stop and show it: either the fix is wrong or that test encodes the bug. Change that test only after the user confirms it is wrong.
