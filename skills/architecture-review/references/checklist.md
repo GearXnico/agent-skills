@@ -46,6 +46,8 @@ Use the sections that match what the review is for. Each line is a question; a "
 - Is coupling explicit (an API or a contract) rather than hidden (a shared table, a shared file)?
 - Do the decision records still match the code?
 - Is there complexity no requirement asks for?
+- Is the same functionality built more than once (two clients for one API, copied validation, parallel helpers)?
+- Is there unused or unnecessary code: dead endpoints, unread configuration, dependencies nothing imports, feature flags that are always on?
 
 ## Cost
 
