@@ -18,6 +18,7 @@ The skills hold no project names, languages or commands. They read the rules of 
 | [`design-doc`](skills/design-doc/SKILL.md) | Turns a request into a short technical design and a plan of small pull requests | Available |
 | [`agents-md`](skills/agents-md/SKILL.md) | Creates or updates AGENTS.md from verified facts, including the git workflow the other skills read | Available |
 | [`dependency-update`](skills/dependency-update/SKILL.md) | Updates dependencies in small, checked steps: security first, majors one at a time | Available |
+| [`package-manager`](skills/package-manager/SKILL.md) | Switches or adopts a package manager, keeping every dependency version | Available |
 
 ## Install
 
