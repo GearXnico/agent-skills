@@ -24,20 +24,25 @@ The skills hold no project names, languages or commands. They read the rules of 
 
 ## Install
 
-Copy a skill folder to where your agent looks for skills.
+Clone this repository once, then run the installer from the root of your project:
+
+```bash
+git clone --depth 1 https://github.com/GearXnico/agent-skills.git ~/agent-skills
+cd your-project
+~/agent-skills/install.sh                        # every skill, into .agents/skills/
+~/agent-skills/install.sh task-flow pr-review    # only these skills
+~/agent-skills/install.sh --claude               # into .claude/skills/ for Claude Code
+~/agent-skills/install.sh --update task-flow     # replace an installed skill with the new version
+```
+
+The installer only copies folders: it skips skills that are already installed unless you pass `--update`, and it never runs the skills or edits other files. Then ask your agent to run `agents-md`, which writes the rules the installed skills read into `AGENTS.md`.
+
+To install by hand, copy a skill folder to where your agent looks for skills:
 
 | Agent | Project | User (all projects) |
 | --- | --- | --- |
 | Claude Code | `.claude/skills/` | `~/.claude/skills/` |
 | Codex, Gemini CLI and other agents that read `.agents/` | `.agents/skills/` | `~/.agents/skills/` |
-
-For example, to add `task-flow` to a project:
-
-```bash
-git clone --depth 1 https://github.com/GearXnico/agent-skills.git /tmp/agent-skills
-mkdir -p .agents/skills
-cp -r /tmp/agent-skills/skills/task-flow .agents/skills/
-```
 
 Install from `main`, which only holds released versions.
 
