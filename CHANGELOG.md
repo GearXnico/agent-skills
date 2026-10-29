@@ -6,6 +6,7 @@ New changes go under `[Unreleased]` and get a version number when a release is c
 
 ### Added
 
+- `install.sh`: copies all or some skills into a project's `.agents/skills/` or `.claude/skills/`, skips installed ones unless `--update` is given, and points to `agents-md` for the setup. Manual install steps stay in the README.
 - `incident-postmortem` skill: writes a blameless postmortem from the facts in the incident window, with a sourced timeline, the trigger and any latent defect traced back to the commit that introduced it, impact, actions and a recommendation for each finding; declines to blame people and keeps personal data out of the report. Four evals on the sandbox `incident` and `services` scenarios.
 - `pr-review` skill: reviews a pull request or branch against the repository's own rules (correctness, security, tests, scope, conventions), with a script that finds usages outside the diff the change can break; verifies each finding and reports a ranked table, or says the change is ready. Five evals on the sandbox `review` scenario.
 - `package-manager` skill: migrates a project to another package manager (Poetry to uv, npm to pnpm) or adopts one when there is none, recommending the best fit with a criteria table; keeps every dependency version, updates scripts, CI, containers and docs, and leaves one lockfile. Python and JavaScript for now, other ecosystems in a to-do list. Four evals on the sandbox `python-poetry`, `python-pip` and `deps` scenarios.
