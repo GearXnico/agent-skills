@@ -1,6 +1,7 @@
 #!/usr/bin/env sh
 # Prints the facts an AGENTS.md is built from (run from the repository root):
-# existing agent files, manifests, declared commands, CI steps and git habits.
+# existing agent files, manifests, declared commands, CI steps, installed
+# skills and git habits.
 # The agent reads this output instead of exploring the repository.
 echo "== Agent instruction files"
 for f in AGENTS.md CLAUDE.md GEMINI.md .cursorrules .github/copilot-instructions.md; do
@@ -22,6 +23,13 @@ done
 echo "== CI steps"
 git ls-files | grep -E '^\.github/workflows/.*\.ya?ml$|^\.gitlab-ci\.yml$' | while IFS= read -r f; do
   echo "-- $f"; grep -E '^[[:space:]]*(- )?run:' "$f" | sed 's/^[[:space:]]*//' | head -15
+done
+
+echo "== Installed skills and the workflow rules they mention"
+for f in .agents/skills/*/SKILL.md .claude/skills/*/SKILL.md; do
+  [ -f "$f" ] || continue
+  echo "-- $f"
+  grep -E 'Git workflow|Optional:' "$f" | cut -c1-200
 done
 
 echo "== Git habits"
