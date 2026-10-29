@@ -28,6 +28,12 @@ Exposed to the internet: <list>. Holds secrets or personal data: <list>.
 | --- | --- | --- | --- | --- | --- |
 | 1 | High | Reliability | ... | `path:line` | ... |
 
+## Improvement opportunities
+
+| # | Opportunity | Evidence | Benefit | Size |
+| --- | --- | --- | --- | --- |
+| 1 | ... | `path:line` | Simpler, cheaper, faster or easier to change | Small, medium or large |
+
 ## What is fine
 
 <One to three lines on what the system does well, so it is kept.>
