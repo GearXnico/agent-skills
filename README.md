@@ -20,6 +20,7 @@ The skills hold no project names, languages or commands. They read the rules of 
 | [`dependency-update`](skills/dependency-update/SKILL.md) | Updates dependencies in small, checked steps: security first, majors one at a time | Available |
 | [`package-manager`](skills/package-manager/SKILL.md) | Switches or adopts a package manager, keeping every dependency version | Available |
 | [`pr-review`](skills/pr-review/SKILL.md) | Reviews a pull request against the repository's rules, including code outside the diff it can break | Available |
+| [`incident-postmortem`](skills/incident-postmortem/SKILL.md) | Writes a blameless postmortem: sourced timeline, trigger and latent causes, impact, and a fix recommendation per finding | Available |
 
 ## Install
 
