@@ -21,6 +21,7 @@ The skills hold no project names, languages or commands. They read the rules of 
 | [`package-manager`](skills/package-manager/SKILL.md) | Switches or adopts a package manager, keeping every dependency version | Available |
 | [`pr-review`](skills/pr-review/SKILL.md) | Reviews a pull request against the repository's rules, including code outside the diff it can break | Available |
 | [`incident-postmortem`](skills/incident-postmortem/SKILL.md) | Writes a blameless postmortem: sourced timeline, trigger and latent causes, impact, and a fix recommendation per finding | Available |
+| [`skill-tune`](skills/skill-tune/SKILL.md) | Fixes an installed skill locally from a recorded finding, proves the fix with its case, keeps local changes through updates, and drafts the issue that shares a defect | Available |
 
 ## Install
 
@@ -33,9 +34,10 @@ cd your-project
 ~/agent-skills/install.sh task-flow pr-review    # only these skills
 ~/agent-skills/install.sh --claude               # into .claude/skills/ for Claude Code
 ~/agent-skills/install.sh --update task-flow     # replace an installed skill with the new version
+~/agent-skills/install.sh --force task-flow      # replace it even if you tuned it, discarding your changes
 ```
 
-The installer only copies folders, without each skill's `evals/` (they are for testing the skill, not for using it): it skips skills that are already installed unless you pass `--update`, and it never runs the skills or edits other files. Then ask your agent to run `agents-md`, which writes the rules the installed skills read into `AGENTS.md`.
+The installer only copies folders, without each skill's `evals/` (they are for testing the skill, not for using it): it skips skills that are already installed unless you pass `--update`, skips copies you changed with `skill-tune` (which updates them without losing your changes) unless you pass `--force`, and it never runs the skills or edits other files. Then ask your agent to run `agents-md`, which writes the rules the installed skills read into `AGENTS.md`.
 
 To install by hand, copy a skill folder to where your agent looks for skills:
 
