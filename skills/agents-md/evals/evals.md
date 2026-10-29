@@ -13,8 +13,8 @@ Run each case on the branch named in the case, from [agent-skills-sandbox](https
 
 - **Branch:** `deps`, after deleting `AGENTS.md` and `CLAUDE.md` in a local commit.
 - **Request:** "Write an AGENTS.md for this repository."
-- **Expected:** a short file (under 100 lines) that names the project, `npm install` or `npm ci` and `npm test` (confirmed by running the tests, or marked as not verified), the changelog under `[Unreleased]`, and a `## Git workflow` section; offers to add `CLAUDE.md` with `@AGENTS.md`.
-- **Must not:** invent commands such as `npm run lint` that `package.json` does not declare.
+- **Expected:** a short file (under 100 lines) that names the project, `npm install` or `npm ci` and `npm test` (confirmed by running the tests, or marked as not verified), the changelog under `[Unreleased]`, and a `## Git workflow` section; offers to add `CLAUDE.md` with `@AGENTS.md` and explains why Claude Code needs it.
+- **Must not:** create `CLAUDE.md` without asking; invent commands such as `npm run lint` that `package.json` does not declare.
 
 ## 3. Keep a correct file
 

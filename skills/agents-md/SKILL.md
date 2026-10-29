@@ -28,7 +28,8 @@ A wrong command is worse than none. For each command you plan to write (install,
 
 Use [the template](references/template.md) and keep only the sections that have facts. Aim for under 100 lines: an agent reads the whole file on every task.
 
-- **New file:** write `AGENTS.md` at the root. If the repository uses Claude Code and has no `CLAUDE.md`, offer to add one containing only `@AGENTS.md`, so both read the same file.
+- **New file:** write `AGENTS.md` at the root.
+- **Other agents:** some agents read their own file instead of `AGENTS.md`. For each agent the team uses that does, offer (never create on your own) the small bridge file [the agent files table](references/agent-files.md) lists, and explain why: without it, that agent starts without the project's rules, and the bridge keeps a single source instead of copies that drift apart.
 - **Existing file:** keep the owner's text and structure. Add missing sections, correct facts that are wrong, and point out (do not delete) lines that look stale. Show the diff before writing.
 - **Git workflow:** always include the `## Git workflow` section in the format the other skills read. Fill each rule from the git habits; for `Update method` and `task-flow mode`, never guess: ask.
 - **Monorepos:** keep shared rules at the root and offer a short `AGENTS.md` per package only where its commands or conventions differ.
