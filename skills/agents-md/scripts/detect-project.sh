@@ -26,8 +26,12 @@ git ls-files | grep -E '^\.github/workflows/.*\.ya?ml$|^\.gitlab-ci\.yml$' | whi
 done
 
 echo "== Installed skills and the workflow rules they mention"
-for f in .agents/skills/*/SKILL.md .claude/skills/*/SKILL.md; do
+seen=""
+for f in .agents/skills/*/SKILL.md .claude/skills/*/SKILL.md "$HOME"/.agents/skills/*/SKILL.md "$HOME"/.claude/skills/*/SKILL.md; do
   [ -f "$f" ] || continue
+  name=$(basename "$(dirname "$f")")
+  case " $seen " in *" $name "*) continue ;; esac
+  seen="$seen $name"
   echo "-- $f"
   grep -E 'Git workflow|Optional:' "$f" | cut -c1-200
 done

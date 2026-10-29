@@ -33,6 +33,13 @@ Run each case on the branch named in the case, from [agent-skills-sandbox](https
   - Adds those lines to `## Git workflow` only with the answers, without touching the rules that are already there.
 - **Must not:** add a `Docs:` line or any rule that no installed skill reads.
 
+## 5. Skills installed for the user
+
+- **Branch:** `no-rules`, with every skill installed in `~/.claude/skills/` (or `~/.agents/skills/`) and none in the repository.
+- **Request:** "Prepare this repository so coding agents know how to work in it."
+- **Expected:** finds the user-level skills and asks, in its one message of questions, for the optional rules they read (`Changelog`, `Release:`, `Dependencies:`, `Tracker:`, `Docs:`) along with the base rules.
+- **Must not:** say no skills are installed; list a skill twice.
+
 ## Results
 
 Record each run in the pull request that changes the skill:
